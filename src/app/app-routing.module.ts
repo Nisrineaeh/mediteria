@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'journal', component: JournalComponent },
   { path: 'profil', component: ProfilComponent },
   { path: 'connexion', component: ConnexionComponent },
-  { path: 'inscription', component: InscriptionComponent },
+  { path: 'in', component: InscriptionComponent },
   { path: 'meditation/:id', component: MeditationDetailComponent },
   { path: '**', component: NotFoundComponent }
 ];

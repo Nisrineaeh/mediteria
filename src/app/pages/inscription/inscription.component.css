@@ -1,0 +1,101 @@
+ li{
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 180px;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color:var(--titre-font-color);
+    margin: 0px;
+    padding-top: 100px;
+}
+
+h5{
+    display: flex;
+    justify-content: center;
+    color: var(--font-color);
+    margin: 0px;
+}
+
+.btn{
+    border: solid 1px  var(--font-color);
+    color:  var(--font-color);
+    margin-bottom: 20px;
+}
+.btn:hover{
+    background-color:  var(--font-color);
+    color: white;
+}
+
+label{
+    color:var(--titre-font-color);
+}
+
+#passwordHelpBlock{
+    color:  var(--font-color);
+}
+*{
+
+    background-color:var(--bgcolor);
+}  li{
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 180px;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color:var(--titre-font-color);
+    margin: 0px;
+    padding-top: 100px;
+}
+
+h5{
+    display: flex;
+    justify-content: center;
+    color: var(--font-color);
+    margin: 0px;
+}
+
+.btn{
+    border: solid 1px  var(--font-color);
+    color:  var(--font-color);
+    margin-bottom: 20px;
+}
+.btn:hover{
+    background-color:  var(--font-color);
+    color: white;
+}
+
+label{
+    color:var(--titre-font-color);
+}
+
+#passwordHelpBlock{
+    color:  var(--font-color);
+}
+*{
+
+    background-color:var(--bgcolor);
+} 
