@@ -14,6 +14,7 @@ import { JournalComponent } from './components/journal/journal.component';
 import { MeditationDetailComponent } from './components/meditation-detail/meditation-detail.component';
 import { ArticleComponent } from './components/article/article.component';
 import { LaundingComponent } from './components/launding/launding.component';
+import { UtilisateurComponent } from './models/utilisateur/utilisateur.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { LaundingComponent } from './components/launding/launding.component';
     JournalComponent,
     MeditationDetailComponent,
     ArticleComponent,
-    LaundingComponent
+    LaundingComponent,
+    UtilisateurComponent
   ],
   imports: [
     BrowserModule,
