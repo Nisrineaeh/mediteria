@@ -13,8 +13,11 @@ import { ConnexionComponent } from './pages/connexion/connexion.component';
 import { JournalComponent } from './components/journal/journal.component';
 import { MeditationDetailComponent } from './components/meditation-detail/meditation-detail.component';
 import { ArticleComponent } from './components/article/article.component';
-import { LaundingComponent } from './components/launding/launding.component';
-import { UtilisateurComponent } from './models/utilisateur/utilisateur.component';
+import { LaundingComponent } from './components/launding/launding.component'; 
+import { ModalInscriptionComponent } from './components/modal-inscription/modal-inscription.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -30,11 +33,14 @@ import { UtilisateurComponent } from './models/utilisateur/utilisateur.component
     MeditationDetailComponent,
     ArticleComponent,
     LaundingComponent,
-    UtilisateurComponent
+    ModalInscriptionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
