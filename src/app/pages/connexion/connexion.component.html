@@ -1,1 +1,25 @@
-<p>connexion works!</p>
+<h3>Vous connecter</h3>
+
+
+
+<form [formGroup]="connexionForm" (ngSubmit)="onSubmit()">
+    <ul>
+        <li>
+            <label for="nom">Votre Email</label>
+            <input type="email" id="form-control" formControlName="email" class="form-control" />
+        </li>
+
+        <li>
+            <label for="mot_de_passe">Votre mot de passe </label>
+            <input type="password" id="mot_de_passe" formControlName="mdp" class="form-control" />
+            <div id="passwordHelpBlock" class="form-text">
+                Votre mot de passe doit contenir entre 8-20 caractères.
+            </div>
+        </li>
+    </ul>
+
+    <div class="button">
+        <button type="button" class="btn" (click)="onSubmit()"> Se connecter</button>
+    </div>
+
+</form>
