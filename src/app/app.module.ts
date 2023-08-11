@@ -18,6 +18,7 @@ import { ModalInscriptionComponent } from './components/modal-inscription/modal-
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { TechListComponent } from './components/tech-list/tech-list.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     MeditationDetailComponent,
     ArticleComponent,
     LaundingComponent,
-    ModalInscriptionComponent
+    ModalInscriptionComponent,
+    TechListComponent
   ],
   imports: [
     BrowserModule,
