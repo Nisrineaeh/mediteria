@@ -3,7 +3,7 @@ export interface TechniqueMeditation {
     name: string;
     ambiance: string;
     description: string;
-    duration: string;
+    duration: number;
     images: string;
     audio: string;
     mot_clefs: string[];

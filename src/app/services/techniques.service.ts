@@ -12,7 +12,7 @@ export class TechniquesService {
   constructor(private http: HttpClient) { }
 
   getSampleTechniques(): Observable<TechniqueMeditation[]> {
-    return this.http.get<TechniqueMeditation[]>(`${this.apiUrl}/sample`);
+    return this.http.get<TechniqueMeditation[]>(`${this.apiUrl}`);
   }
 
 }
