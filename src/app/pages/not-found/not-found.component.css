@@ -1,0 +1,113 @@
+.svgcontainer, svg#fourohfour {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.topconvo {
+  font-size: 35px;
+}
+.topconvo span{
+  font-weight: bolder;
+  color: #83B6C3  ;
+}
+.bottomconvo{
+    padding-top: 15px;
+}
+
+.subcont {
+  width: 100%;
+  text-align: center;
+  height: 80vh;
+}
+
+.svgcontainer svg#fourohfour {
+  max-height: 320px;
+  height: 21vw;
+  min-height: 170px;
+}
+.svgcontainer svg#fourohfour .st0 {
+  fill: var(--font-color);
+}
+
+.svgcontainer svg#fourohfour .st1 {
+  fill: var(--titre-font-color);
+}
+
+.svgcontainer svg#fourohfour .st2 {
+  fill: var(--bgcolor);
+}
+
+svg#swipe {
+  width: 300px;
+  position: absolute;
+  top: 30%;
+  left: -300px;
+  filter: blur(6px);
+  -webkit-animation: swipecut 0.1s linear 1s forwards;
+  animation: swipecut 0.1s linear 1s forwards;
+}
+
+svg#swipe .st0 {
+  fill: #4e8025;
+}
+
+svg#picklerick {
+  width: 300px;
+  position: absolute;
+  bottom: -400px;
+  right: 13%;
+  -webkit-animation: popup 1s 5s forwards;
+  animation: popup 1s 5s forwards;
+}
+
+
+
+
+@media only screen and (max-height: 420px) {
+    .svgcontainer svg#fourohfour {
+    height: 180px;
+    }
+    .topconvo{
+        font-size: 25px;
+    }
+    .bottomconvo{
+        font-size: 13px;
+    }
+    svg#picklerick {
+        bottom: -420px;
+        right: 10vw;
+    }
+}
+
+@media only screen and (max-width: 600px) { 
+    .topconvo{
+        font-size: 25px;
+    }
+    .bottomconvo{
+        font-size: 13px;
+    }
+    svg#picklerick {
+        width: 240px;
+    }
+}
+
+
+.btn{
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-weight: bolder;
+    color: #83B6C3  ;
+  display: inline-block;
+  font-size: 0.5em;
+  padding: 1em 2em;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 25px #83B6C3 ;
+}
