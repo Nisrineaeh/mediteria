@@ -12,6 +12,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ConnexionComponent } from './pages/connexion/connexion.component';
 import { JournalComponent } from './components/journal/journal.component';
 import { MeditationDetailComponent } from './components/meditation-detail/meditation-detail.component';
+import { ArticleComponent } from './components/article/article.component';
+import { LaundingComponent } from './components/launding/launding.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { MeditationDetailComponent } from './components/meditation-detail/medita
     NotFoundComponent,
     ConnexionComponent,
     JournalComponent,
-    MeditationDetailComponent
+    MeditationDetailComponent,
+    ArticleComponent,
+    LaundingComponent
   ],
   imports: [
     BrowserModule,
