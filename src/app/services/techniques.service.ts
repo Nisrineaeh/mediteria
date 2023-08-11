@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, tap, catchError, throwError } from 'rxjs';
 import { TechniqueMeditation } from '../models/technique-meditation';
 
 @Injectable({
@@ -11,7 +11,8 @@ export class TechniquesService {
 
   constructor(private http: HttpClient) { }
 
-  getMyTechniques(): Observable<TechniqueMeditation[]>{
-    return this.http.get<TechniqueMeditation[]>(this.apiUrl);
+  getSampleTechniques(): Observable<TechniqueMeditation[]> {
+    return this.http.get<TechniqueMeditation[]>(`${this.apiUrl}/sample`);
   }
+
 }

@@ -13,8 +13,17 @@ export class TechListComponent {
   constructor(private techniqueMed: TechniquesService) { }
 
   ngOnInit() {
-    this.techniqueMed.getMyTechniques().subscribe(data => {
-      this.techniques = data;
-    });
+    console.log("Initialisation de TechListComponent");
+    this.techniqueMed.getSampleTechniques().subscribe({
+      next: (data: TechniqueMeditation[]) => {
+        this.techniques = data;
+      },
+      error: (err) => {
+        console.error(`recup hs`, err);
+      },
+      complete: ()=>{
+        console.log('Technique Load Ok')
+      }
+    })
   }
 }

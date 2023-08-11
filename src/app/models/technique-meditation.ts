@@ -1,5 +1,5 @@
 export interface TechniqueMeditation {
-    id: number;
+    id: string;
     name: string;
     ambiance: string;
     description: string;

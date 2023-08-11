@@ -1,1 +1,5 @@
-<p>tech-list works!</p>
+<div *ngFor="let technique of techniques">
+    <h2>{{ technique.name }}</h2>
+    <p>{{ technique.description }}</p>
+    <!-- ... autres champs ... -->
+</div>
