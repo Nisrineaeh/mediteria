@@ -8,5 +8,6 @@
                 pendant
                 {{uneTechAAfficher.duration}}.</p>
             <!-- <audio controls><source src="{{uneTechAAfficher.audio}}" type="audio/mp3"></audio> -->
-            <button href="#" class="btn btn-outline" [routerLink]="['/meditation', uneTechAAfficher.id]">Commencer la méditation</button>
+            <button href="#" class="btn btn-outline" (click)="OnTechSelected(uneTechAAfficher)"
+                [routerLink]="['/meditation', uneTechAAfficher.id]">Commencer la méditation</button>
         </div>

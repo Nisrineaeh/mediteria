@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TechniqueMeditation } from 'src/app/models/technique-meditation';
-import { TechniquesService } from 'src/app/services/techniques.service';
+import { TechSelectService } from 'src/app/services/tech-select.service';
 
 @Component({
   selector: 'app-card',
@@ -10,9 +10,12 @@ import { TechniquesService } from 'src/app/services/techniques.service';
 export class CardComponent implements OnInit {
   @Input() uneTechAAfficher!: TechniqueMeditation;
 
-  constructor(private techService: TechniquesService){}
+  constructor(private techS: TechSelectService) { }
 
   ngOnInit(): void { }
 
-
+  OnTechSelected(uneTechAAfficher: TechniqueMeditation) {
+    this.techS.setSelectedTech(uneTechAAfficher);
+    console.log(this.uneTechAAfficher)
+  }
 }
