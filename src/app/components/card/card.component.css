@@ -1,0 +1,28 @@
+
+.container-techniques{
+    display:flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.card{
+    margin-bottom: 50px;
+    border: 1px solid var(--font-color);
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    color:var(--titre-font-color);
+
+}
+button{
+    color: var(--font-color);
+}
+button:hover{
+    background-color: var(--font-color);
+    color: white;
+}
+

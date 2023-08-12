@@ -22,6 +22,7 @@ import { TechListComponent } from './components/tech-list/tech-list.component';
 import { CardComponent } from './components/card/card.component';
 import { RedirectComponent } from './pages/redirect/redirect.component';
 import { ChronometreComponent } from './components/chronometre/chronometre.component';
+import { JournalComponent } from './pages/journal/journal.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { ChronometreComponent } from './components/chronometre/chronometre.compo
     TechListComponent,
     CardComponent,
     RedirectComponent,
-    ChronometreComponent
+    ChronometreComponent,
+    JournalComponent
   ],
   imports: [
     BrowserModule,

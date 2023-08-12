@@ -1,0 +1,56 @@
+<h3>Tableau de Bord - Journal de Méditation</h3>
+<div class="ressentis">
+    <h5>Messages enregistrés :</h5>
+    <div>
+        <ul>
+            <li *ngFor="let msg of message">
+                <p class="rep">
+                    Votre ressentis qu'en à la Séance :</p>
+                <p class="blue"> {{ msg.technique }}, Lieu : {{ msg.lieu }}, Nombre : {{ msg.nombre}}
+                </p>
+                <p class="rep">Votre message :</p>
+                <p class="blue">{{ msg.message }}</p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="content">
+    <h3>Enregistrez vos ressentis quant à la séance :</h3>
+
+    <div class="option">
+        <label>Séance : </label>
+        <select #techniqueSelect>
+            <option *ngFor="let technique of techniques" [value]="technique.name">
+                {{ technique.name }}
+            </option>
+        </select>
+    </div>
+
+    <div class="option">
+        <label>Lieu :</label>
+        <select #lieuSelect>
+            <option *ngFor="let lieu of lieuxOptions" [value]="lieu">
+                {{ lieu }}
+            </option>
+        </select>
+    </div>
+
+    <div class="option">
+        <label>Seul(e) ? :</label>
+        <select #nombreSelect>
+            <option *ngFor="let nombre of nombreOptions" [value]="nombre">
+                {{ nombre }}
+            </option>
+        </select>
+    </div>
+
+
+    <div>
+        <textarea #messageInput placeholder="Écrivez votre entrée ici..."></textarea>
+    </div>
+
+    <div><button class="btn" (click)="addMessage(techniqueSelect.value, lieuSelect.value, nombreSelect.value)">Ajouter
+            une nouvelle entrée</button></div>
+</div>
