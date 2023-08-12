@@ -10,7 +10,7 @@ import { ProfilComponent } from './pages/profil/profil.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ConnexionComponent } from './pages/connexion/connexion.component';
-import { JournalComponent } from './components/journal/journal.component';
+
 import { MeditationDetailComponent } from './components/meditation-detail/meditation-detail.component';
 import { ArticleComponent } from './components/article/article.component';
 import { LaundingComponent } from './components/launding/launding.component'; 
@@ -34,7 +34,7 @@ import { ChronometreComponent } from './components/chronometre/chronometre.compo
     InscriptionComponent,
     NotFoundComponent,
     ConnexionComponent,
-    JournalComponent,
+
     MeditationDetailComponent,
     ArticleComponent,
     LaundingComponent,
