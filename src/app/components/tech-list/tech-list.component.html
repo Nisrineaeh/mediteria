@@ -1,5 +1,7 @@
-<div *ngFor="let technique of techniques">
-    <h2>{{ technique.name }}</h2>
-    <p>{{ technique.description }}</p>
-    <!-- ... autres champs ... -->
+<div class="container-tech">
+    <div class="row">
+        <div class="col-4" *ngFor="let tech of techniqueRecupDeMyTech">
+            <app-card [uneTechAAfficher]="tech"></app-card>
+        </div>
+    </div>
 </div>

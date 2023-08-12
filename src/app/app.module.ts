@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { TechListComponent } from './components/tech-list/tech-list.component';
+import { CardComponent } from './components/card/card.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { TechListComponent } from './components/tech-list/tech-list.component';
     ArticleComponent,
     LaundingComponent,
     ModalInscriptionComponent,
-    TechListComponent
+    TechListComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

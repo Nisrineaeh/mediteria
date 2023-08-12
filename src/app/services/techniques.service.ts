@@ -7,11 +7,13 @@ import { TechniqueMeditation } from '../models/technique-meditation';
   providedIn: 'root'
 })
 export class TechniquesService {
-  private apiUrl = 'http://localhost:8080/technique-meditation'
+  items: TechniqueMeditation[]=[];
+
+  private apiUrl = 'http://localhost:3000/techniques'
 
   constructor(private http: HttpClient) { }
 
-  getSampleTechniques(): Observable<TechniqueMeditation[]> {
+  geteTechnique(): Observable<TechniqueMeditation[]> {
     return this.http.get<TechniqueMeditation[]>(`${this.apiUrl}`);
   }
 

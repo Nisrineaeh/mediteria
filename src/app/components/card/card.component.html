@@ -1,0 +1,12 @@
+<div class="container- techniques">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{uneTechAAfficher.images}}">
+        <div class="card-body">
+            <h5 class="title">{{uneTechAAfficher.name}}</h5>
+            <p class="text">Cette technique est la numéro {{uneTechAAfficher.id}} du catalogue, elle est decrite comme :
+                {{uneTechAAfficher.description}} Elle vous projetera dans un univers {{uneTechAAfficher.ambiance}}
+                pendant
+                {{uneTechAAfficher.duration}}.</p>
+            <!-- <audio controls><source src="{{uneTechAAfficher.audio}}" type="audio/mp3"></audio> -->
+            <button href="#" class="btn btn-outline" [routerLink]="['/meditation', uneTechAAfficher.id]">Commencer la méditation</button>
+        </div>
