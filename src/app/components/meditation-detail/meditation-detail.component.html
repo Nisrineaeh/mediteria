@@ -1,1 +1,27 @@
-<p>meditation-detail works!</p>
+<div *ngIf="meditations" class="meditation-details">
+    <img [src]="meditations.images" class="card-img-top">
+    <div class="card-body">
+        <div>
+            <h5 class="title">{{ meditations.name }}</h5>
+            <p class="text">
+                Cette technique est la numéro {{ meditations.id }} du catalogue, elle est décrite comme :
+                {{ meditations.description }} Elle vous projettera dans un univers {{ meditations.ambiance }} pendant
+                {{ meditations.duration }}.
+            </p>
+        </div>
+        <div class="keywords">
+            <span class="keyword-animation" *ngFor="let keyword of displayedWords">{{keyword}}</span>
+        </div>
+        <div class="controls">
+            <div class="audio-control">
+                <audio controls>
+                    <source [src]="meditations.audio" type="audio/mp3">
+                </audio>
+            </div>
+            <div class="chrono-control">
+                <!-- <app-chronometre (startClicked)="onStartClicked()" (stopClicked)="onStopClicked()"
+                    (resetClicked)="onResetClicked()"></app-chronometre> -->
+            </div>
+        </div>
+    </div>
+</div>

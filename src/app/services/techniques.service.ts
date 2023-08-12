@@ -17,4 +17,8 @@ export class TechniquesService {
     return this.http.get<TechniqueMeditation[]>(`${this.apiUrl}`);
   }
 
+  getMeditationById(id: number): Observable<TechniqueMeditation> {
+    return this.http.get<TechniqueMeditation>(`${this.apiUrl}/${id}`);
+  }
+
 }
