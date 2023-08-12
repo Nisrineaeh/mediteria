@@ -20,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { TechListComponent } from './components/tech-list/tech-list.component';
 import { CardComponent } from './components/card/card.component';
+import { RedirectComponent } from './pages/redirect/redirect.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { CardComponent } from './components/card/card.component';
     LaundingComponent,
     ModalInscriptionComponent,
     TechListComponent,
-    CardComponent
+    CardComponent,
+    RedirectComponent
   ],
   imports: [
     BrowserModule,
