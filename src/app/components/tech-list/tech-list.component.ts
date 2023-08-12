@@ -8,7 +8,7 @@ import { TechniquesService } from 'src/app/services/techniques.service';
   styleUrls: ['./tech-list.component.css']
 })
 export class TechListComponent {
-  @Input() techniqueRecupDeMyTech!: TechniqueMeditation[];
+  @Input() techniqueRecupDeLaHome!: TechniqueMeditation[];
 
   ngOnInit() {
   }}

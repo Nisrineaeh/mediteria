@@ -7,25 +7,25 @@ import { TechniquesService } from 'src/app/services/techniques.service';
   templateUrl: './launding.component.html',
   styleUrls: ['./launding.component.css']
 })
-export class LaundingComponent implements OnInit{
+export class LaundingComponent{
 
-  techniques: TechniqueMeditation[]= [];
-  constructor(private techService: TechniquesService){}
+  techniques!: TechniqueMeditation[];
 
-  ngOnInit(): void {
-    this.loadTech();
+  constructor(private techniquesService: TechniquesService) { }
+
+  ngOnInit() {
+    // Chargez les techniques de méditation lors de l'initialisation du composant
+    this.loadMeditationTechniques();
   }
 
-  loadTech(){
-    this.techService.geteTechnique().subscribe({
-      next: (data) => {
-        this.techniques = data;
-      },
-      error: (err) => {
-        console.error('Erreur lors de la recup des données', err);
-      }
+  loadMeditationTechniques() {
+
+    this.techniquesService.geteTechnique().subscribe((technique) => {
+      this.techniques = technique;
+      console.log(this.techniques)
     })
-    }
+  }
+
   }
 
 

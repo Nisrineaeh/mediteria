@@ -10,7 +10,7 @@ import { TechniquesService } from 'src/app/services/techniques.service';
 export class CardComponent implements OnInit {
   @Input() uneTechAAfficher!: TechniqueMeditation;
 
-
+  constructor(private techService: TechniquesService){}
 
   ngOnInit(): void { }
 
