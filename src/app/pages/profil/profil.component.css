@@ -1,0 +1,38 @@
+
+.tech-list{
+    display:flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+    
+}
+
+
+h3{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color:var(--titre-font-color);
+    
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 100px;
+}
+
+
+
+*{
+    
+    background-color: var(--bgcolor);
+}
+.card{
+    margin-bottom: 50px;
+    border: 1px solid #E4D9FF;
+    margin-right: 50px;
+
+}

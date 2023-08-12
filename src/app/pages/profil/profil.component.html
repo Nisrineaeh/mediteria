@@ -1,1 +1,30 @@
-<p>profil works!</p>
+<div class="profile-container">
+    <h3>Votre profil</h3>
+    <ul>
+        <li>Nom</li>
+        <li>Prénom</li>
+        <li>Pseudo</li>
+        <li>Date de création de compte</li>
+        <li>Nombre de listes enregistrées</li>
+    </ul>
+
+    <app-journal></app-journal>
+
+    <h3>Liste des séances sélectionnées</h3>
+
+    <div class="tech-list">
+        <div *ngFor="let tech of monUnivers">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{tech.images}}">
+                <div class="card-body">
+                    <h5 class="title">{{tech.name}}</h5>
+                    <p class="text">
+                        Cette technique est la numéro {{tech.id}} du catalogue, elle est décrite comme :
+                        {{tech.description}} Elle vous projettera dans un univers {{tech.ambiance}} pendant
+                        {{tech.duration}}.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
