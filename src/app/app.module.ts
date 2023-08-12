@@ -21,6 +21,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { TechListComponent } from './components/tech-list/tech-list.component';
 import { CardComponent } from './components/card/card.component';
 import { RedirectComponent } from './pages/redirect/redirect.component';
+import { ChronometreComponent } from './components/chronometre/chronometre.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { RedirectComponent } from './pages/redirect/redirect.component';
     ModalInscriptionComponent,
     TechListComponent,
     CardComponent,
-    RedirectComponent
+    RedirectComponent,
+    ChronometreComponent
   ],
   imports: [
     BrowserModule,
