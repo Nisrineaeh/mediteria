@@ -15,6 +15,10 @@ export class UtilisateursService {
 
   constructor(private http: HttpClient) { }
 
+  getUtilisateur(id:number){
+    return this.http.get<Utilisateur>(`${this.bddUrl}/${id}`)
+  }
+
   getAllUtilisateurs(): Observable<Utilisateur[]> {
     return this.http.get<Utilisateur[]>(this.bddUrl);
   }
