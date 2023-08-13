@@ -17,7 +17,7 @@
 }
 
 textarea{
-    width: 800px;
+    width: 700px;
     height:200px;
 }
 
@@ -37,10 +37,12 @@ li{
 
 label{
     color:var(--titre-font-color);
+    margin: 0px;
 }
 
 h5{
     color:var(--titre-font-color);
+    margin-top: 20px;
 }
 
 .rep{
@@ -56,6 +58,11 @@ button:hover{
 }
 
 .ressentis{
-    border: 1px dotted var(--font-color);
+    border: 1px solid var(--font-color);
     width: auto;
+    border-radius: 30px;
+}
+
+*{
+    background-color: var(--bgcolor);
 }

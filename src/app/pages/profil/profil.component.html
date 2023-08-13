@@ -1,6 +1,14 @@
 <div class="profile-container">
+
+    <!-- En tete du profil -->
+    <div class="profile-header">
+        <img src="" alt="" srcset="">
+        <h3>Nom user</h3>
+    </div>
+
+    <!-- infos du profil -->
     <h3>Votre profil</h3>
-    <ul>
+    <ul class="profil-detail">
         <li>Nom</li>
         <li>Prénom</li>
         <li>Pseudo</li>
@@ -10,7 +18,7 @@
 
     <app-journal></app-journal>
 
-    <h3>Liste des séances sélectionnées</h3>
+    <h3>Séances sélectionnées</h3>
 
     <div class="tech-list">
         <div *ngFor="let tech of monUnivers">

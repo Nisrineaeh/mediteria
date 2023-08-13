@@ -28,8 +28,6 @@ export class UtilisateursService {
 
   }
 
-
-
   majUtilisateur(id: number, utilisateur: Utilisateur): Observable<Utilisateur> {
     return this.http.patch<Utilisateur>(this.bddUrl, utilisateur);
   }
