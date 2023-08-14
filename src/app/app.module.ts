@@ -23,6 +23,7 @@ import { CardComponent } from './components/card/card.component';
 import { RedirectComponent } from './pages/redirect/redirect.component';
 import { ChronometreComponent } from './components/chronometre/chronometre.component';
 import { JournalComponent } from './pages/journal/journal.component';
+import { ModalConfimationComponent } from './modal-confimation/modal-confimation.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { JournalComponent } from './pages/journal/journal.component';
     CardComponent,
     RedirectComponent,
     ChronometreComponent,
-    JournalComponent
+    JournalComponent,
+    ModalConfimationComponent
   ],
   imports: [
     BrowserModule,

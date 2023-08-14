@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 
+import { Router} from '@angular/router';
+
 // import { AuthServiceService } from 'src/app/services/auth-service.service';
 
 
@@ -18,7 +20,8 @@ export class ConnexionComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private authService: AuthService) { }
+    private authService: AuthService, 
+    private router: Router) { }
 
   ngOnInit(): void {
     this.initialForm();
@@ -44,6 +47,7 @@ export class ConnexionComponent implements OnInit {
             // Stocker le token dans le localStorage
             localStorage.setItem('access_token', response.access_token);
             console.log('Connexion réussie et token stocké!');
+            this.router.navigate(['/profil'])
           } else {
             console.error('Token non reçu dans la réponse.');
           }
