@@ -37,10 +37,12 @@ export class ConnexionComponent implements OnInit {
       const motDePasse = this.connexionForm.value.mdp;
 
       this.authService.login(email, motDePasse).subscribe({
+        
         next: (response: any) => {
-          if (response && response.token) {
+          console.log('Réponse complète du serveur :', response)
+          if (response && response.access_token) {
             // Stocker le token dans le localStorage
-            localStorage.setItem('token', response.token);
+            localStorage.setItem('access_token', response.access_token);
             console.log('Connexion réussie et token stocké!');
           } else {
             console.error('Token non reçu dans la réponse.');
