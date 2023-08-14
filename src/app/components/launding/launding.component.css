@@ -74,12 +74,11 @@ button:hover{
 } */
 
 
-
 :root {
-    --font-color: #ffffff; /* Couleur de texte par défaut */
-    --titre-font-color: #FFA500; /* Couleur du titre */
-    --btn-bg-color: #B54574; /* Couleur d'arrière-plan du bouton */
-    --btn-bg-hover-color: #FFA500; /* Couleur d'arrière-plan du bouton au survol */
+    --font-color: #ffffff;
+    --titre-font-color: #FFA500; 
+    --btn-bg-color: #B54574; 
+    --btn-bg-hover-color: #FFA500;
 }
 
 body {
@@ -104,16 +103,17 @@ body {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
-    color: var(--titre-font-color);
+    color: #FFA500;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    width: 55%;
 }
 
 ul {
@@ -138,6 +138,7 @@ li {
     transition: background-color 0.3s ease;
     margin-top: 2rem;
     width: 100%;
+    font-weight: bolder;
 }
 
 .btn:hover {
@@ -172,7 +173,7 @@ li {
     flex-wrap: wrap;
 }
 
-/* Responsiveness pour les écrans plus petits */
+
 @media (max-width: 768px) {
     .left-align, .right-align {
         width: 100%;
@@ -188,5 +189,21 @@ div.landing-page{
 
 .btn:hover{
     color: white;
-    background-color: var(--font-color);
+    background-color: #FFA500;;
 }
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+li{
+    font-size: 1rem;
+    width: 50%;
+} 

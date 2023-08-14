@@ -12,15 +12,6 @@ form{
     padding-bottom: 180px;
 }
 
-h3{
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    color:var(--titre-font-color);
-    margin: 0px;
-    padding-top: 100px;
-}
-
 h5{
     display: flex;
     justify-content: center;
@@ -68,7 +59,7 @@ h3{
     padding: 20px;
     color:var(--titre-font-color);
     margin: 0px;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 h5{
