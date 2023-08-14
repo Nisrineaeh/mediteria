@@ -14,9 +14,8 @@ export class ModalConfimationComponent {
 
 
 
-  onConfirm(){
+  onConfirm(): void{
     
-    this.router.navigate(['/profil']);
     this.modalRef.hide(); ///fermer la fenetre
   }
 

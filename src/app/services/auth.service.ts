@@ -11,6 +11,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   login(email: string, mot_de_passe: string) {
+    console.log('Appel du service de connexion');
     return this.http.post(this.apiUrl + '/login', { email, mot_de_passe });
   }
 }
