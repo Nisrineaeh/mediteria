@@ -14,4 +14,7 @@ export class AuthService {
     console.log('Appel du service de connexion');
     return this.http.post(this.apiUrl + '/login', { email, mot_de_passe });
   }
+  checkConnexion(): boolean {
+    return !!localStorage.getItem('access_token');
+  }
 }

@@ -106,3 +106,19 @@ ul{
 .profile-container{
     background-color: var(--bgcolor);
 }
+
+.deconnexion-button {
+    padding: 10px 20px;
+    background-color: red; /* Couleur de fond rouge pour la déconnexion */
+    color: #fff; /* Texte en blanc */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; /* Pour le centrer */
+    margin: 20px auto; /* Centrer le bouton */
+    transition: background-color 0.3s; /* Animation de transition pour le survol */
+}
+
+.deconnexion-button:hover {
+    background-color: darkred; /* Assombrir le bouton lorsque vous le survolez */
+}

@@ -25,6 +25,12 @@
                     </ul>
                 </li>
             </ul>
+            <button [class.connected]="authService.checkConnexion()" [class.disconnected]="!authService.checkConnexion()">
+                {{ authService.checkConnexion() ? "Connecté" : "Déconnecté" }}
+            </button>
+
+
+
         </div>
     </div>
 </nav>
