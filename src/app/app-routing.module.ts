@@ -8,13 +8,14 @@ import { InscriptionComponent } from './pages/inscription/inscription.component'
 import { MeditationDetailComponent } from './components/meditation-detail/meditation-detail.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { RedirectComponent } from './pages/redirect/redirect.component';
+import { canActivateIfAuthenticated } from './auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: "full" },
   { path: 'home', component: PageHomeComponent },
-  { path: 'guide', component: TechniquesComponent },
+  { path: 'guide', component: TechniquesComponent, canActivate: [canActivateIfAuthenticated] },
 
-  { path: 'profil', component: ProfilComponent },
+  { path: 'profil', component: ProfilComponent, canActivate: [canActivateIfAuthenticated] },
   { path: 'connexion', component: ConnexionComponent },
   { path: 'in', component: InscriptionComponent },
   { path: 'meditation/:id', component: MeditationDetailComponent },

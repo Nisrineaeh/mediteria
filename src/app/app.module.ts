@@ -24,6 +24,7 @@ import { RedirectComponent } from './pages/redirect/redirect.component';
 import { ChronometreComponent } from './components/chronometre/chronometre.component';
 import { JournalComponent } from './pages/journal/journal.component';
 import { ModalConfimationComponent } from './modal-confimation/modal-confimation.component';
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
@@ -56,7 +57,7 @@ import { ModalConfimationComponent } from './modal-confimation/modal-confimation
     ReactiveFormsModule,
     ModalModule.forRoot(),
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
