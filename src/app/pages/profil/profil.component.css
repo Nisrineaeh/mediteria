@@ -109,16 +109,16 @@ ul{
 
 .deconnexion-button {
     padding: 10px 20px;
-    background-color: red; /* Couleur de fond rouge pour la déconnexion */
-    color: #fff; /* Texte en blanc */
+    background-color: rgba(255, 0, 0, 0.548);
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    display: block; /* Pour le centrer */
-    margin: 20px auto; /* Centrer le bouton */
-    transition: background-color 0.3s; /* Animation de transition pour le survol */
+    display: block; 
+    margin-left:400px;
+    transition: background-color 0.3s; 
 }
 
 .deconnexion-button:hover {
-    background-color: darkred; /* Assombrir le bouton lorsque vous le survolez */
+    background-color: darkred;
 }

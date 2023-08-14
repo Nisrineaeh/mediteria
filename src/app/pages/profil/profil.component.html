@@ -9,14 +9,15 @@
 
     <!-- infos du profil -->
     <h3>Votre profil</h3>
+    <div *ngIf="userData">
     <ul class="profil-detail">
-        <li>Nom</li>
-        <li>Prénom</li>
-        <li>Pseudo</li>
-        <li>Date de création de compte</li>
-        <li>Nombre de listes enregistrées</li>
-    </ul>
+        <li>Nom : {{userData?.nom}}</li>
+        <li>Prénom: {{userData.prenom}}</li>
+        <li>Pseudo: {{userData.username}}</li>
+        <li>Date de création de compte: {{userData.Date}}</li>
 
+    </ul>
+    </div>
     <app-journal></app-journal>
 
     <h3>Séances sélectionnées</h3>

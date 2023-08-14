@@ -2,10 +2,12 @@
     background-color: green;
     color: white;
     border: none;
+    border-radius: 30px;
 }
 
 .disconnected {
     background-color: red;
     color: white;
     border: none;
+    border-radius: 30px;
 }
