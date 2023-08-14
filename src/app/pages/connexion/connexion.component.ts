@@ -15,9 +15,10 @@ import { AuthService } from 'src/app/services/auth.service';
 export class ConnexionComponent implements OnInit {
 
   connexionForm!: FormGroup;
-  // private authService: AuthServiceService
+
   constructor(
-    private formBuilder: FormBuilder) { }
+    private formBuilder: FormBuilder,
+    private authService: AuthService) { }
 
   ngOnInit(): void {
     this.initialForm();
@@ -30,35 +31,30 @@ export class ConnexionComponent implements OnInit {
     });
   }
 
+  onSubmit() {
+    if (this.connexionForm.valid) {
+      const email = this.connexionForm.value.email;
+      const motDePasse = this.connexionForm.value.mdp;
 
+      this.authService.login(email, motDePasse).subscribe({
+        next: (response: any) => {
+          if (response && response.token) {
+            // Stocker le token dans le localStorage
+            localStorage.setItem('token', response.token);
+            console.log('Connexion réussie et token stocké!');
+          } else {
+            console.error('Token non reçu dans la réponse.');
+          }
+        },
+        error: (error) => {
+          console.error('Erreur lors de la connexion:', error);
+        }
+      });
+    }
+  }
+  }
 
-  async onSubmit() {
-//     if (this.connexionForm.valid) {
-//       const email = this.connexionForm.value.email;
-//       const motDePasse = this.connexionForm.value.mdp;
-
-//       try {
-//         const user = await this.authService.validateUser(email, motDePasse);
-//         if (user) {
-//           const token = await this.authService.generateToken(user);
-//           if (token) {
-//             // Token généré avec succès, vous pouvez rediriger l'utilisateur ou effectuer d'autres actions
-//             console.log('Connexion réussie ! Token:', token);
-//           } else {
-//             console.error('La génération du token a échoué.');
-//           }
-//         } else {
-//           console.error('Identifiants incorrects.');
-//         }
-//       } catch (error) {
-//         console.error('Erreur lors de la validation de l\'utilisateur :', error);
-//       }
-//   }
-// }
-
-
+ 
 
 
 
-}
-}
