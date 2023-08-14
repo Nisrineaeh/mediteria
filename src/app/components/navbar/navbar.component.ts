@@ -8,6 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class NavbarComponent {
     isConnected: boolean = false;
+    navbarVisible: boolean = true;
 
   constructor(public authService: AuthService) { }
 
@@ -19,4 +20,6 @@ export class NavbarComponent {
     // Vérifiez si l'utilisateur est connecté. Ceci est un exemple basé sur la présence d'un token.
     this.isConnected = !!localStorage.getItem('access_token');
   }
+
+
 }
