@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Utilisateur } from '../models/utilisateur';
 
@@ -40,4 +40,22 @@ export class UtilisateursService {
     return this.http.get<Utilisateur>(`${this.bddUrl}/findByEmail/${email}`);
   }
 
+  private getHeaders(): HttpHeaders {
+    const token = localStorage.getItem('access_token');
+    let headers = new HttpHeaders();
+    if (token) {
+      headers = headers.set('Authorization', 'Bearer ' + token);
+    }
+    return headers;
+  }
+
+  getUserInfo(): Observable<Utilisateur> {
+    return this.http.get<Utilisateur>(`${this.bddUrl}/me`, {
+      headers: this.getHeaders()
+    });
+  }
+
+  getUserById(id: number): Observable<Utilisateur> {
+    return this.http.get<Utilisateur>(`${this.bddUrl}/${id}`);
+  }
 }

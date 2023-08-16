@@ -1,3 +1,5 @@
+
+
 <div class="profile-container">
 
     <!-- En tete du profil -->
@@ -9,12 +11,12 @@
 
     <!-- infos du profil -->
     <h3>Votre profil</h3>
-    <div *ngIf="userData">
+    <div *ngIf="utilisateur">
     <ul class="profil-detail">
-        <li>Nom : {{userData.nom}}</li>
-        <li>Prénom: {{userData.prenom}}</li>
-        <li>Pseudo: {{userData.username}}</li>
-        <li>Date de création de compte: {{userData.date}}</li>
+        <li>Nom : {{utilisateur.nom}}</li>
+        <li>Prénom: {{utilisateur.prenom}}</li>
+        <li>Pseudo: {{utilisateur.username}}</li>
+        <li>Date de création de compte: {{utilisateur.date}}</li>
 
     </ul>
     </div>
