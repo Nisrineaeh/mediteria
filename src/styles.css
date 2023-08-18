@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto&family=Satisfy&display=swap');
+
 :root {
-  --font-color: #b54574;
-  --titre-font-color: #7C0033;
-  --bgcolor: #FDECEF;
+  --font-color: #A8DF8E;
+  --titre-font-color: #FFBFBF;
+  --bgcolor: #FFE5E5;
+  --dark-color: #668586;
 }
+
+
