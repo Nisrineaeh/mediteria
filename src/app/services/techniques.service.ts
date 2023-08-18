@@ -9,7 +9,7 @@ import { TechniqueMeditation } from '../models/technique-meditation';
 export class TechniquesService {
   items: TechniqueMeditation[]=[];
 
-  private apiUrl = 'http://localhost:3000/techniques'
+  private apiUrl = 'http://localhost:8080/technique-meditation'
 
   constructor(private http: HttpClient) { }
 
