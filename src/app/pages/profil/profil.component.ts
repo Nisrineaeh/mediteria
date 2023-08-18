@@ -60,4 +60,6 @@ export class ProfilComponent implements OnInit {
     this.router.navigate(['/connexion']); // Rediriger vers la page de connexion
   }
 
+
+
 }

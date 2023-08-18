@@ -1,0 +1,42 @@
+<form  [formGroup]="techniqueForm"  (submit)="ajouterTechnique()" class="container mt-5">
+
+    <div class="mb-3">
+        <label class="form-label">Nom</label>
+        <input type="text" class="form-control" formControlName="name" name="name">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Ambiance</label>
+        <input type="text" class="form-control" formControlName="ambiance" name="ambiance">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Description</label>
+        <textarea class="form-control" formControlName="description" name="description"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Durée (en minutes)</label>
+        <input type="number" class="form-control" formControlName="duration" name="duration">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Chemin de l'image</label>
+        <input type="text" class="form-control" formControlName="images" name="images">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Chemin de l'audio</label>
+        <input type="text" class="form-control" formControlName="audio" name="audio">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Mots-clés (séparés par des virgules)</label>
+        <input type="text" class="form-control" formControlName="mot_clefs" name="motsClefs">
+    </div>
+
+    
+
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+
+</form>

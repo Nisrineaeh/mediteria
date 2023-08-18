@@ -8,7 +8,7 @@
   object-fit: cover;
   width: 100%;
   height: 867px;
-
+  
 }
 
 .card-body {
@@ -40,20 +40,20 @@ audio{
 
 
 .keyword-animation:nth-child(1) {
-  bottom: 800px; /* Ajustez cette valeur pour le positionnement vertical */
+  bottom: 800px; 
 }
 
 .keyword-animation:nth-child(2) {
-  bottom: 700px; /* Ajustez cette valeur pour le positionnement vertical */
+  bottom: 700px; 
 }
 .keyword-animation:nth-child(3) {
-  bottom: 600px; /* Ajustez cette valeur pour le positionnement vertical */
+  bottom: 600px; 
 }
 .keyword-animation:nth-child(4) {
-  bottom: 500px; /* Ajustez cette valeur pour le positionnement vertical */
+  bottom: 500px; 
 }
 .keyword-animation:nth-child(5) {
-  bottom: 400px; /* Ajustez cette valeur pour le positionnement vertical */
+  bottom: 400px; 
 }
 
 @keyframes fadeInUp {

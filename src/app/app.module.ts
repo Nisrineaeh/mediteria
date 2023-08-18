@@ -25,6 +25,7 @@ import { ChronometreComponent } from './components/chronometre/chronometre.compo
 import { JournalComponent } from './pages/journal/journal.component';
 import { ModalConfimationComponent } from './modal-confimation/modal-confimation.component';
 import { AuthService } from './services/auth.service';
+import { AjoutTechniqueComponent } from './components/ajout-technique/ajout-technique.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { AuthService } from './services/auth.service';
     RedirectComponent,
     ChronometreComponent,
     JournalComponent,
-    ModalConfimationComponent
+    ModalConfimationComponent,
+    AjoutTechniqueComponent
   ],
   imports: [
     BrowserModule,

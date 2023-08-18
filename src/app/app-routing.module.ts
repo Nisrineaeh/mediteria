@@ -9,6 +9,7 @@ import { MeditationDetailComponent } from './components/meditation-detail/medita
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { RedirectComponent } from './pages/redirect/redirect.component';
 import { canActivateIfAuthenticated } from './auth.guard';
+import { AjoutTechniqueComponent } from './components/ajout-technique/ajout-technique.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: "full" },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'in', component: InscriptionComponent },
   { path: 'meditation/:id', component: MeditationDetailComponent },
   { path: 'redirect', component: RedirectComponent},
+  { path: 'ajout-technique', component: AjoutTechniqueComponent},
   { path: '**', component: NotFoundComponent }
 ];
 
