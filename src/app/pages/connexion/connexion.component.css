@@ -6,7 +6,7 @@
 h3{
     display: flex;
     justify-content: center;
-    color: var(--titre-font-color);
+    color: var(--dark-color);
     padding: 20px;
     padding-top: 200px;
     margin: 0px;
@@ -14,7 +14,7 @@ h3{
 }
 
 label{
-    color: var(--font-color);
+    color: var(--dark-color);
 }
 
 .btn{
