@@ -3,10 +3,10 @@
         <img class="card-img-top" src="{{uneTechAAfficher.images}}">
         <div class="card-body">
             <h5 class="title">{{uneTechAAfficher.name}}</h5>
-            <p class="text">Cette technique est la numéro {{uneTechAAfficher.id}} du catalogue, elle est decrite comme :
+            <p class="text">Cette technique est la n° {{uneTechAAfficher.id}} du catalogue, elle est decrite comme :
                 {{uneTechAAfficher.description}} Elle vous projetera dans un univers {{uneTechAAfficher.ambiance}}
                 pendant
-                {{uneTechAAfficher.duration}}.</p>
+                {{uneTechAAfficher.duration}} minutes.</p>
             
             <button href="#" class="btn btn-outline" (click)="OnTechSelected(uneTechAAfficher)"
                 [routerLink]="['/meditation', uneTechAAfficher.id]">Commencer la méditation</button>
