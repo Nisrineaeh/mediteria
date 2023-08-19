@@ -24,8 +24,7 @@ export class AjoutTechniqueComponent implements OnInit {
         duration: ['', [Validators.required]],
         images:[''],
         audio:[''],
-        mot_clefs: ['[]']
-        
+        mot_clefs: ['']
       });
     }
     
