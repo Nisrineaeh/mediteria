@@ -19,10 +19,10 @@ export class AuthService {
       .pipe(
         tap(response => {
           localStorage.setItem('access_token', response.access_token);
-          if (response.user_id !== undefined) {
+          if (response.user_id && Number.isFinite(response.user_id)) {
             localStorage.setItem('user_id', response.user_id.toString());
           } else {
-            console.error('user_id is missing in the response.');
+            console.error('user_id is either missing or invalid in the response.');
           }
           this.isConnected = true;
         })
@@ -48,7 +48,11 @@ export class AuthService {
 
   getUserId(): number | null {
     const userId = localStorage.getItem('user_id');
-    return userId ? parseInt(userId, 10) : null;
+    if (userId && !isNaN(Number(userId))) {
+      return parseInt(userId, 10);
+    }
+    console.error('Stored user_id is not a valid number.');
+    return null;
   }
 }
 

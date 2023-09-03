@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
@@ -7,5 +9,11 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
   styleUrls: ['./modal-inscription.component.css']
 })
 export class ModalInscriptionComponent {
-  constructor(public bsModalRef: BsModalRef) { }
+  constructor(public bsModalRef: BsModalRef,
+              private router: Router) { }
+
+  onClose():void{
+    this.bsModalRef.hide();
+    this.router.navigate(['/connexion']);
+  }
 }

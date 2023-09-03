@@ -58,4 +58,6 @@ export class UtilisateursService {
   getUserById(id: number): Observable<Utilisateur> {
     return this.http.get<Utilisateur>(`${this.bddUrl}/${id}`);
   }
+
+
 }

@@ -1,3 +1,4 @@
+import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TechniqueMeditation } from 'src/app/models/technique-meditation';
@@ -25,35 +26,40 @@ export class ProfilComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadUserInfo();
-    this.loadUserDataFromEmail();
+    // this.loadUserDataFromEmail();
   }
 
   loadUserInfo(): void {
-    this.userService.getUserById(1).subscribe(data => {
-      this.utilisateur = data;
+    this.userService.getUserInfo().subscribe({
+      next: (data) => {
+        this.utilisateur = data;
+      },
+      error: (err) => {
+        console.error('Erreur lors de la recup des donnee utilisateur', err);
+      }
     });
   }
 
-  loadUserDataFromEmail(): void {
-    const userEmail = localStorage.getItem('user_email');
-    if (userEmail) {
-      this.userService.findByEmail(userEmail).subscribe({
-        next: (data: Utilisateur | null) => {
-          if (data) {
-            this.userData = data;
-            console.log(this.userData);
-          } else {
-            console.error('Aucune donnée utilisateur trouvée pour cet email.');
-          }
-        },
-        error: error => {
-          console.error('Erreur lors de la récupération des données utilisateur:', error);
-        }
-      });
-    } else {
-      console.error('Email non trouvé dans le stockage local');
-    }
-  }
+  // loadUserDataFromEmail(): void {
+  //   const userEmail = localStorage.getItem('user_email');
+  //   if (userEmail) {
+  //     this.userService.findByEmail(userEmail).subscribe({
+  //       next: (data: Utilisateur | null) => {
+  //         if (data) {
+  //           this.userData = data;
+  //           console.log(this.userData);
+  //         } else {
+  //           console.error('Aucune donnée utilisateur trouvée pour cet email.');
+  //         }
+  //       },
+  //       error: error => {
+  //         console.error('Erreur lors de la récupération des données utilisateur:', error);
+  //       }
+  //     });
+  //   } else {
+  //     console.error('Email non trouvé dans le stockage local');
+  //   }
+  // }
 
   deconnexion(): void {
     localStorage.removeItem('access_token'); // Supprimer le token d'authentification

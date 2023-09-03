@@ -53,7 +53,7 @@ export class InscriptionComponent implements OnInit {
     this.modalService.show(ModalInscriptionComponent, {
       class: 'modal-dialog-centered',
       initialState: {
-        //passe de donnée initial à la fenetre modal
+        //pr passer des donnees inital a la fenetre
       }
     });
   }
