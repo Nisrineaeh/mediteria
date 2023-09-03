@@ -41,6 +41,7 @@ export class AjoutTechniqueComponent implements OnInit {
         this.meditationService.addTechnique(technique).subscribe({
           next: (response) => {
             console.log('Technique ajoutée !', response);
+            alert(`Vous venez d\'ajouter la technique ${technique.name}`)
             this.techniqueForm.reset();
             // Vous pouvez aussi rediriger vers une autre page ou montrer un message
           },
