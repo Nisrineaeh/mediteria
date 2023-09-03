@@ -36,9 +36,9 @@ export class UtilisateursService {
     return this.http.delete<void>(this.bddUrl);
   }
 
-  findByEmail(email: string): Observable<Utilisateur | null> {
-    return this.http.get<Utilisateur>(`${this.bddUrl}/findByEmail/${email}`);
-  }
+  // findByEmail(email: string): Observable<Utilisateur | null> {
+  //   return this.http.get<Utilisateur>(`${this.bddUrl}/findByEmail/${email}`);
+  // }
 
   private getHeaders(): HttpHeaders {
     const token = localStorage.getItem('access_token');
@@ -59,5 +59,12 @@ export class UtilisateursService {
     return this.http.get<Utilisateur>(`${this.bddUrl}/${id}`);
   }
 
+  getUserProfile(): Observable<Utilisateur>{
+    const userId = localStorage.getItem('user_id');
+    if(!userId){
+      throw new Error('Pas id utilisateur trouvé')
+    }
+    return this.http.get<Utilisateur>(`${this.bddUrl}/${userId}`)
+  }
 
 }

@@ -24,21 +24,25 @@ export class ProfilComponent implements OnInit {
     this.monUnivers = this.techService.getSelectedTech();
   }
 
-  ngOnInit(): void {
-    this.loadUserInfo();
-    // this.loadUserDataFromEmail();
-  }
-
-  loadUserInfo(): void {
-    this.userService.getUserInfo().subscribe({
-      next: (data) => {
-        this.utilisateur = data;
-      },
-      error: (err) => {
-        console.error('Erreur lors de la recup des donnee utilisateur', err);
-      }
+  ngOnInit() {
+    console.log('Id utilisateur actuel', localStorage.getItem('user_id'))
+    this.userService.getUserProfile().subscribe(data => {
+      this.utilisateur = data;
+    }, error => {
+      console.error('Erreur lors de la recup du profil utilisateur', error)
     });
   }
+
+  // loadUserInfo(): void {
+  //   this.userService.getUserInfo().subscribe({
+  //     next: (data) => {
+  //       this.utilisateur = data;
+  //     },
+  //     error: (err) => {
+  //       console.error('Erreur lors de la recup des donnee utilisateur', err);
+  //     }
+  //   });
+  // }
 
   // loadUserDataFromEmail(): void {
   //   const userEmail = localStorage.getItem('user_email');

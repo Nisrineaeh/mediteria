@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -10,7 +11,8 @@ export class NavbarComponent {
     isConnected: boolean = false;
     navbarVisible: boolean = true;
 
-  constructor(public authService: AuthService) { }
+  constructor(public authService: AuthService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.checkConnection();
@@ -22,4 +24,8 @@ export class NavbarComponent {
   }
 
 
+  deconnexion(): void {
+    localStorage.removeItem('access_token'); // Supprimer le token d'authentification
+    this.router.navigate(['/connexion']); // Rediriger vers la page de connexion
+  }
 }

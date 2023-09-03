@@ -20,7 +20,9 @@ export class AuthService {
         tap(response => {
           localStorage.setItem('access_token', response.access_token);
           if (response.user_id && Number.isFinite(response.user_id)) {
-            localStorage.setItem('user_id', response.user_id.toString());
+            localStorage.setItem('user_id', `${response.user_id}`);
+            console.log('Id utilisateur stocké:', localStorage.getItem('user_id'))
+            console.log(typeof response.user_id)
           } else {
             console.error('user_id is either missing or invalid in the response.');
           }

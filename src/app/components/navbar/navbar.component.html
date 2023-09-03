@@ -29,6 +29,8 @@
                 {{ authService.checkConnexion() ? "Connecté" : "Déconnecté" }}
             </button>
 
+            <button [class.connected]="authService.checkConnexion()" [class.disconnected]="!authService.checkConnexion()" class="deconnexion-button" (click)="deconnexion()">{{ authService.checkConnexion() ? "Déconnexion" : "Se connecté" }}</button>
+
 
 
         </div>
