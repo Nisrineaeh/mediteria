@@ -122,3 +122,11 @@ ul{
 .deconnexion-button:hover {
     background-color: darkred;
 }
+
+.add{
+    border-radius: 20px;
+    color: white;
+    border-color: white;
+    background-color: var(--font-color);
+    margin-bottom: 20px;
+}
